@@ -9,7 +9,7 @@
         body {
             background-color: rgba(23, 173, 184, 0.733);
             color: white;
-            font: normal 1 Arial           
+            font: normal 18pt Arial           
         }
     </style>
 </head>
@@ -17,9 +17,16 @@
     <h1>Estudando DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
-    <div>clique em mim</div>
+    <div id="msg">clique em mim</div>
     <script>
-        
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write(p1.innerText)
+        /*var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        window.document.get */
+        var d = window.document.getElementsByName('msg')[0]
+        d.innerText = 'Olá'
     </script>
         
 </body>
